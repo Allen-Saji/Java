@@ -62,11 +62,11 @@ public class inherit {
         System.out.println("DETAILS OF OFFICER");
         off.display();
         off.printsalary();
-        System.out.println("Specialization of officer is="+off.specialization);
+        System.out.println("Specialization of officer is: "+off.specialization);
         System.out.println("DETAILS OF MANAGER");
         ma.display();
         ma.printsalary();
-        System.out.println("Department  of manager is="+ma.department);
+        System.out.println("Department  of manager is: "+ma.department);
 
     }
 
