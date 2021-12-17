@@ -47,9 +47,9 @@ public class rps {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player1's input: ");
+        System.out.println("Player1's input(rock/paper/scissors): ");
         String pl1 = sc.next();
-        System.out.println("Player2's input: ");
+        System.out.println("Player2's input(rock/paper/scissors): ");
         String pl2 = sc.next();
 
 
