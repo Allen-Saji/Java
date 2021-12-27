@@ -17,12 +17,12 @@ class Emplo{
         salary = sc.nextLine();
     }
 
-    void Display(Emplo e1){
-        System.out.println("Employee code: "+e1.empcode);
-        System.out.println("Employee name: "+ e1.name);
-        System.out.println("Employee dob: "+ e1.dob);
-        System.out.println("Employee designation: "+e1.designation);
-        System.out.println("Employee salary: "+e1.salary);
+    void Display(){
+        System.out.println("Employee code: "+empcode);
+        System.out.println("Employee name: "+name);
+        System.out.println("Employee dob: "+dob);
+        System.out.println("Employee designation: "+designation);
+        System.out.println("Employee salary: "+salary);
     }
 }
 
@@ -31,6 +31,6 @@ public class EmploDemo {
     public static void main(String[] args) {
         Emplo e1 = new Emplo();
         e1.Getdata();
-        e1.Display(e1);
+        e1.Display();
     }
 }
