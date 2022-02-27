@@ -1,10 +1,13 @@
-package GuiApplications;
+package jdbc;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
-public class LoginForm extends JFrame implements ActionListener {
+public class StudentRegistration extends JFrame implements ActionListener {
+	
+	
 
     JButton b;
     JPanel p;
@@ -111,9 +114,41 @@ public class LoginForm extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         JOptionPane.showMessageDialog(f, "Student Registration Completed");
+         Connection conn;
+    	 Statement stmt;
+    	 
+    	 try {
+    		 conn = DriverManager.getConnection("jdbc:mysql://localhost/student_database","root",""); 
+			 stmt = conn.createStatement();
+			 
+			 String name1 = name.getText();
+			 String adm  = adm_no.getText();
+			 String age1 = age.getText();
+			 String address = add.getText();
+			 String em = email.getText();
+			 String ph = phone.getText();
+			 String bat = batch.getText();
+			 String p = pass.getText();
+			 
+			 String gen;
+			 
+			 if(male.isSelected()) {
+				  gen = "male";
+			 }else {
+				  gen = "female";
+			 }
+			 
+			 String strSql = "INSERT INTO student(Name,Adm_no,Address,age,batch,phone_number,email,gender,password) VALUES ('"+name1+"','"+adm+"','"+address+"','"+age1+"','"+bat+"','"+ph+"','"+em+"','"+gen+"','"+p+"')";
+			 stmt.executeUpdate(strSql);
+				System.out.println("\nThe entered data has been inseted into the table\n");
+					
+    	 }catch (Exception e1) {
+ 			// TODO: handle exception
+ 			System.out.println(e);
+ 		}
     }
 
     public static void main(String[] args) {
-        new LoginForm();
+        new StudentRegistration();
     }
 }
