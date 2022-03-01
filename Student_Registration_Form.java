@@ -17,7 +17,7 @@ public class StudentRegistration extends JFrame implements ActionListener {
     JRadioButton male,female;
     JFrame f;
 
-    LoginForm(){
+    StudentRegistration(){
         f = new JFrame();
         f.setTitle("Student Registration Form");
         f.setSize(450,500);
