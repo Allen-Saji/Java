@@ -84,7 +84,7 @@ public class StudentRegistration extends JFrame implements ActionListener {
         b.setBounds(100,320,200,20);
         b.addActionListener(this);
 
-        p = new JPanel(new GridLayout(3, 1));
+        p = new JPanel();
         p.add(nameLabel);
         p.add(addLabel);
         p.add(admLabel);
